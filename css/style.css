@@ -1,0 +1,271 @@
+/*reset*/
+*{
+    margin: 0; 
+    padding: 0;
+    box-sizing: 0;
+}
+
+/*encabezado*/
+
+
+body{
+    background-image: url("../img/fondo.png");
+    background-size:center;
+}
+
+
+header h1{
+    text-align: left;
+    font-size: 80px;
+    font-style: oblique;
+    border: 5px groove black ;
+    margin: 5px;
+    padding: 50px;
+    background-color: rgba(243, 241, 241, 0.733);
+
+}
+
+
+/*menu*/
+
+.menu{
+    background-color: rgba(243, 241, 241, 0.733);
+    text-align: center;
+    margin: 5px;
+    border: 5px groove black;
+    display: flex;
+    
+}
+
+
+.menu ul li{
+    list-style-type: none;
+    display: inline-block;
+    position: relative;
+    margin: 20px;
+    font-size: 25px;
+    
+}
+
+/*menu productos*/ 
+
+.menu ul ul{
+    display: none;
+    position: absolute;
+}
+
+.menuProductos {
+    border: 1px groove black;
+    border-top: none;
+    background-color: rgba(243, 241, 241, 0.733);
+}
+
+.menu ul li:hover > ul{
+    display: block;
+}
+
+/*main*/
+
+h2{
+    font-size: 40px ;
+    text-align: center;
+    margin: 20px;
+    padding: 10px;
+}
+
+main{
+    background-color: rgba(243, 241, 241, 0.733);
+    border: 5px groove black;
+    margin: 20px 10px 20px 10px;
+}
+
+
+
+
+
+/*pie de pagina*/
+
+footer{
+    border: 5px groove black;
+    background-color: rgba(243, 241, 241, 0.733);
+    margin: 20px 10px 20px 10px;
+}
+
+footer h3, h4{
+    text-align: center;
+}
+
+footer h3{
+    border-top: 2px groove black;
+    margin-top: 20px;
+    padding: 10px;
+}
+
+footer h4{
+    margin-bottom: 10px;
+    
+}
+
+footer ul li{
+    list-style-type: none;
+    margin: 20px;
+}
+
+/*productos*/
+
+.mangas{
+    display: inline-block;
+    text-align: center;
+    position: relative;
+}
+.textmanga{
+    position: absolute;
+    text-align: center;
+}
+
+.mainProductos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    font-size: 2rem;
+}
+
+.mainProductos img{
+    width: 300px;
+}
+
+/* nosotros main*/
+
+.nosotrosMain{
+    display: flex;
+    flex-direction: column ;
+    align-items: center
+}
+
+.nosotrosMain img{
+    width: 300px;
+}
+
+/*parrafos nosotros*/
+
+.parrafoUno{
+    font-size: 23px;
+    text-align: center;
+    margin: 10px;
+    padding: 10px;
+}
+
+.parrafoDos{
+    font-size: 20px;
+    margin: 10px;
+}
+
+/*preguntas frecuentes*/
+
+.preguntas{
+    margin: 50px;
+    padding: 50px;
+}
+
+.preguntas ul li{
+    list-style-type: none;
+    display: none;
+    font-size: 20px;
+    margin: 15px;
+}
+
+.preguntas ul{
+    font-size: 30px;
+    margin: 20px;
+    padding: 10px;
+}
+
+.preguntas ul:hover > li{
+    display: block;
+}
+
+
+
+/*formulario de contacto*/
+
+.formulario{
+    text-align: center;
+    margin: 20px;
+    padding: 5px;
+}
+
+.formulario fieldset{
+    display: inline;
+}
+
+.formulario fieldset legend{
+    text-align: center;
+    font-size: 25px;
+    border: 1px groove black;
+    padding: 5px;
+}
+
+.formulario div{
+    text-align: center;
+    margin: 10px;
+    padding: 10px;
+}
+
+@media screen and (min-width: 768px){
+
+    .mainProductos{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr, 0.5fr, 1fr, 0.5fr, 1fr;
+        grid-template-areas:"texto texto"
+                            "texto1 texto2"
+                            "imagen1 imagen2"
+                            "texto3 texto4"
+                            "imagen3 imagen4";
+        gap: 1rem;
+        align-content: center;
+        justify-items: center;
+        
+    }
+
+.mainProductos h2{
+    text-align: center;
+}
+
+    .hProductos{
+        grid-area: texto;
+    }
+
+    .mangas{
+        grid-area: texto1;
+    }
+
+    .imgMangas{
+        grid-area: imagen1;
+    }
+
+    .peluches{
+        grid-area: texto2;
+    }
+
+    .imgPeluches{
+        grid-area: imagen2;
+    }
+
+    .indumentaria{
+        grid-area: texto3;
+    }
+
+    .imgIndu{
+        grid-area: imagen3;
+    }
+
+    .coleccionables{
+        grid-area: texto4;
+    }
+
+    .imgColec{
+        grid-area: imagen4;
+    }
+}
